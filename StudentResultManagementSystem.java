@@ -29,7 +29,7 @@ public class StudentResultManagementSystem {
             System.out.println("2. Student Login");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
-            
+
             switch (choice) {
                 case 1 -> {
                     sc.nextLine();
