@@ -1,4 +1,4 @@
- import java.util.*;
+import java.util.*;
 
 public class ResultSystem {
     Map<Integer, Student> students = new HashMap<>();
