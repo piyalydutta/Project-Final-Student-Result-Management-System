@@ -1,4 +1,4 @@
- import java.util.*;
+import java.util.*;
 
 public class Student {
     int id;
@@ -62,8 +62,14 @@ public class Student {
 
     void applyForRecheck() {
         if (!appliedForRecheck) {
-            appliedForRecheck = true;
-            System.out.println("Recheck applied successfully.");
+            Payment payment = new Payment();
+            boolean success = payment.processRecheckPayment(id, 50.0);
+            if (success) {
+                appliedForRecheck = true;
+                System.out.println("Recheck applied successfully.");
+            } else {
+                System.out.println("Payment failed. Try again.");
+            }
         } else {
             System.out.println("Recheck already applied.");
         }
